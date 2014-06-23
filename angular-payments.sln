@@ -1,0 +1,44 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2013
+VisualStudioVersion = 12.0.30501.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "example", "example", "{D222D045-5073-4722-B5F3-267EF694E6A8}"
+	ProjectSection(SolutionItems) = preProject
+		example\index.html = example\index.html
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "nuget", "nuget", "{EF3DCCBD-8DBA-4829-A404-785731C4CB5F}"
+	ProjectSection(SolutionItems) = preProject
+		nuget\angular.payments.nuspec = nuget\angular.payments.nuspec
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{D118DCA7-A4D2-42B9-946B-CFE23A81B561}"
+	ProjectSection(SolutionItems) = preProject
+		src\cards.js = src\cards.js
+		src\common.js = src\common.js
+		src\form.js = src\form.js
+		src\format.js = src\format.js
+		src\module.js = src\module.js
+		src\validate.js = src\validate.js
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{1FD19273-1470-43A9-990C-3EC3C6E27F2A}"
+	ProjectSection(SolutionItems) = preProject
+		bower.json = bower.json
+		Gruntfile.js = Gruntfile.js
+		package.json = package.json
+		README.md = README.md
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "lib", "lib", "{0671838D-4D63-44A3-BC44-7633C61654FA}"
+	ProjectSection(SolutionItems) = preProject
+		lib\angular-payments.js = lib\angular-payments.js
+		lib\angular-payments.min.js = lib\angular-payments.min.js
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

@@ -1,0 +1,24 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd">
+    <metadata>
+        <id>Angular.Payments</id>
+        <version>0.0.1</version>
+        <title>Angular Payments</title>
+        <authors>ADAPTByDesign</authors>
+        <projectUrl>https://github.com/ADAPTByDesign/angular-payments</projectUrl>
+        <requireLicenseAcceptance>false</requireLicenseAcceptance>
+        <description>Angular and Stripe Payment integration</description>
+        <summary>Angular and Stripe Payment integration</summary>
+        <releaseNotes />
+        <copyright />
+        <tags>angularjs stripe angular-payments</tags>
+        <dependencies>
+            <dependency id="AngularJS.Core" version="1.0.7" />
+            <dependency id="AngularJS.Route" version="1.0.7" />
+        </dependencies>
+    </metadata>
+    <files>
+        <file src="..\lib\angular-payments.js" target="content\Scripts\angular-payments.js" />
+        <file src="..\lib\angular-payments.min.js" target="content\Scripts\angular-payments.min.js" />
+    </files>
+</package>
