@@ -15,6 +15,7 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "nuget", "nuget", "{EF3DCCBD
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{D118DCA7-A4D2-42B9-946B-CFE23A81B561}"
 	ProjectSection(SolutionItems) = preProject
+		angular-payments.css = angular-payments.css
 		src\cards.js = src\cards.js
 		src\common.js = src\common.js
 		src\form.js = src\form.js

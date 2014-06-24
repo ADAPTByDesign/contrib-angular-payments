@@ -98,7 +98,7 @@ angular.module('angularPayments')
           typeModel.assign(scope, card.type);
       }
 
-      ret = (ref = num.length, __indexOf.call(card.length, ref) >= 0) && (card.luhn === false || _luhnCheck(num));
+      var ret = (ref = num.length, __indexOf.call(card.length, ref) >= 0) && (card.luhn === false || _luhnCheck(num));
 
       return ret;
   }
@@ -107,10 +107,10 @@ angular.module('angularPayments')
     // valid if empty - let ng-required handle empty
     if(val == null || val.length == 0) return true;
 
-    obj = Common.parseExpiry(val);
+    var obj = Common.parseExpiry(val);
 
-    month = obj.month;
-    year = obj.year;
+    var month = obj.month;
+    var year = obj.year;
 
     var currentTime, expiry, prefix;
 
@@ -147,9 +147,9 @@ angular.module('angularPayments')
   return function(type, val, ctrl, scope, attr){
     if(!_validators[type]){
 
-      types = Object.keys(_validators);
+      var types = Object.keys(_validators);
 
-      errstr  = 'Unknown type for validation: "'+type+'". ';
+      var errstr  = 'Unknown type for validation: "'+type+'". ';
       errstr += 'Should be one of: "'+types.join('", "')+'"';
 
       throw errstr;

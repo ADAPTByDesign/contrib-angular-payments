@@ -13,12 +13,13 @@
         <copyright />
         <tags>angularjs stripe angular-payments</tags>
         <dependencies>
-            <dependency id="AngularJS.Core" version="1.0.7" />
-            <dependency id="AngularJS.Route" version="1.0.7" />
+            <dependency id="AngularJS.Core" version="1.2.0" />
+            <dependency id="AngularJS.Route" version="1.2.0" />
         </dependencies>
     </metadata>
     <files>
-        <file src="..\lib\angular-payments.js" target="content\Scripts\angular-payments.js" />
-        <file src="..\lib\angular-payments.min.js" target="content\Scripts\angular-payments.min.js" />
+      <file src="..\src\angular-payment.css" target="content\angular-payments.css" />
+      <file src="..\lib\angular-payments.js" target="content\Scripts\angular-payments.js" />
+      <file src="..\lib\angular-payments.min.js" target="content\Scripts\angular-payments.min.js" />
     </files>
 </package>

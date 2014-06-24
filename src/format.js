@@ -27,11 +27,21 @@ angular.module('angularPayments')
       digit = String.fromCharCode(e.which);
       $target = angular.element(e.currentTarget);
       value = $target.val();
+
+      // add icon class to text box - PR35
+      $target.removeClass('visa mastercard discover amex unionpay jcb dinersclub laser maestro');
+      $target.addClass(Cards.fromNumber(value).type);
+
       card = Cards.fromNumber(value + digit);
       length = (value.replace(/\D/g, '') + digit).length;
       
       upperLength = 16;
       
+      // PR 23
+      if (e.which == 8) {
+          return;
+      }
+
       if (card) {
         upperLength = card.length[card.length.length - 1];
       }
@@ -178,6 +188,11 @@ angular.module('angularPayments')
     $target = angular.element(e.currentTarget);
     digit = String.fromCharCode(e.which);
     
+    // ISSUE 38, PR 23
+    if (e.which == 8) {
+        return;
+    }
+
     if (!/^\d+$/.test(digit) && !e.meta && e.keyCode >= 46) {
       e.preventDefault();
       return;
@@ -193,8 +208,8 @@ angular.module('angularPayments')
     }
   }
 
-  _formats['cvc'] = function(elem){
-    elem.bind('keypress', _formatCVC)
+  _formats['cvc'] = function(elem) {
+      elem.bind('keypress', _formatCVC);
   }
 
   // expiry
@@ -218,8 +233,8 @@ angular.module('angularPayments')
     value = value.replace(/\D/g, '');
     
     if (value.length > 6) {
-      e.preventDefault()
-      return;
+        e.preventDefault();
+        return;
     }
   };
 
@@ -343,9 +358,9 @@ angular.module('angularPayments')
   return function(type, elem, ctrl){
     if(!_formats[type]){
 
-      types = Object.keys(_formats);
+      var types = Object.keys(_formats);
 
-      errstr  = 'Unknown type for formatting: "'+type+'". ';
+      var errstr  = 'Unknown type for formatting: "'+type+'". ';
       errstr += 'Should be one of: "'+types.join('", "')+'"';
 
       throw errstr;

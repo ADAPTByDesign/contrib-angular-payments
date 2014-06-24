@@ -26,8 +26,10 @@ angular.module('angularPayments')
 
     var ret = {};
 
-    for(i in possibleKeys){
-        if(possibleKeys.hasOwnProperty(i)){
+    for (i in possibleKeys) {
+        // issue 18
+        //if(possibleKeys.hasOwnProperty(i)){
+        if (data.hasOwnProperty(possibleKeys[i])) {
             ret[camelToSnake(possibleKeys[i])] = angular.copy(data[possibleKeys[i]]);
         }
     }
@@ -80,9 +82,11 @@ angular.module('angularPayments')
           button.prop('disabled', false);
         }
 
-        scope.expiryMonth = expMonthUsed ? scope.expMonth : null;
-        scope.expiryYear = expYearUsed ? scope.expMonth : null;
-
+        // PR22
+        //scope.expiryMonth = expMonthUsed ? scope.expMonth : null;
+        //scope.expiryYear = expYearUsed ? scope.expMonth : null;        
+        scope.expMonth = null;
+        scope.expYear  = null;
       });
     }
   }
