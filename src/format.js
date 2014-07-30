@@ -28,8 +28,14 @@ angular.module('angularPayments')
                 value = $target.val();
 
                 // add icon class to text box - PR35
-                $target.removeClass('visa mastercard discover amex unionpay jcb dinersclub laser maestro');
-                $target.addClass(Cards.fromNumber(value).type);
+                var allCards = Cards.allCards();
+                angular.forEach(allCards, function (aCard) {
+                    $target.removeClass(aCard.type);
+                });
+                var cardClass = Cards.fromNumber(value);
+                if (cardClass) {
+                    $target.addClass(cardClass.type);                    
+                }
 
                 card = Cards.fromNumber(value + digit);
                 length = (value.replace(/\D/g, '') + digit).length;

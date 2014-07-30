@@ -1,7 +1,6 @@
 angular.module('angularPayments')
     .factory('Cards', [
         function() {
-
             var defaultFormat = /(\d{1,4})/g;
             var defaultInputFormat = /(?:^|\s)(\d{4})$/;
 
@@ -119,7 +118,8 @@ angular.module('angularPayments')
                 fromNumber: function(val) { return _fromNumber(val); },
                 fromType: function(val) { return _fromType(val); },
                 defaultFormat: function() { return defaultFormat; },
-                defaultInputFormat: function() { return defaultInputFormat; }
+                defaultInputFormat: function () { return defaultInputFormat; },
+                allCards: function () { return cards; }
             };
         }
     ]);

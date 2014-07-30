@@ -2,7 +2,7 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd">
     <metadata>
         <id>Angular.Payments</id>
-        <version>0.1.1</version>
+        <version>0.1.2</version>
         <title>Angular Payments</title>
         <authors>ADAPTByDesign</authors>
         <projectUrl>https://github.com/ADAPTByDesign/angular-payments</projectUrl>
@@ -18,7 +18,7 @@
         </dependencies>
     </metadata>
     <files>
-      <file src="..\src\angular-payments.css" target="content\angular-payments.css" />
+      <file src="..\src\angular-payments.css" target="content\content\angular-payments.css" />
       <file src="..\lib\angular-payments.js" target="content\Scripts\angular-payments.js" />
       <file src="..\lib\angular-payments.min.js" target="content\Scripts\angular-payments.min.js" />
     </files>
